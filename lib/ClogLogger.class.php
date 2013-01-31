@@ -29,9 +29,6 @@ class ClogLogMessage{
 		$array = array();
 		$array['message'] = $this->message;
 		$array['tags'] = $this->tags;
-
-		print_r($this->message);
-
 		return $array;
 	}
 }
