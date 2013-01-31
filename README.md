@@ -17,7 +17,7 @@ require_once('lib/ClogLogger.php');
 ## Configure
 
 ```php
-$logger = new ClogLogger(array(
+$logger = new \Clog\ClogLogger(array(
 	'host' => 'clog.your-site.com',
 	'port' => '443',
 	'protocol' => 'https',

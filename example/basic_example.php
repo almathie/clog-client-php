@@ -1,7 +1,7 @@
 <?php
 require_once(dirname(__FILE__) . '/../lib/ClogLogger.class.php'); 
 
-$logger = new ClogLogger(array(
+$logger = new \Clog\ClogLogger(array(
 	'host' => "127.0.0.1",
 	'port' => "9292",
 	'token' => "YETBHmDM13vQTtN=1pcnS8vNpPW",

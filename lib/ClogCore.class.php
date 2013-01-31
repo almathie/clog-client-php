@@ -7,6 +7,8 @@
  * @copyright BSD 2-Clause License. See LICENSE file.
  */
 
+namespace Clog;
+
 class ClogCore{
     protected $core_version = '0.0.1';
 
@@ -296,7 +298,7 @@ class ClogCore{
 /**
  * The Http_Exception class represents an HTTP response status that is not 200 OK.
  */
-class Http_Exception extends Exception{
+class Http_Exception extends \Exception{
     const NOT_MODIFIED = 304;
     const BAD_REQUEST = 400;
     const NOT_FOUND = 404;
@@ -310,7 +312,7 @@ class Http_Exception extends Exception{
 /**
  * The JSON_Exception class represents an failures of decoding json strings.
  */
-class JSON_Exception extends Exception {
+class JSON_Exception extends \Exception {
     public $error = null;
     public $error_code = JSON_ERROR_NONE;
 

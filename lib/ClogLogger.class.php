@@ -1,4 +1,5 @@
 <?php
+namespace Clog;
 
 require_once('ClogCore.class.php'); 
 
