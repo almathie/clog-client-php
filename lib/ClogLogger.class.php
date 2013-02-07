@@ -13,12 +13,20 @@ class ClogLogMessage{
 	}
 
 	function setTags($tags = array()) {
+        if(! is_array($tags))
+            throw new InvalidArgumentException('Tag list must be an array');
     	foreach($tags as $tag_name => $tag_value){
     		$this->setTag($tag_name, $tag_value);
     	}
     }
 
 	function setTag($tag_name, $tag_value){
+        if(! is_string($tag_name))
+            throw new InvalidArgumentException('Tag name must be a string');
+        if(! is_string($tag_value))
+            throw new InvalidArgumentException('Tag value must be a string');
+        if($tag_value == "")
+            unset($this->tags[$tag_name]);
 		$this->tags[$tag_name] = $tag_value;
 	}
 
@@ -64,12 +72,20 @@ class ClogLogger extends ClogCore {
     }
 
     function setTags($tags = array()) {
+        if(! is_array($tags))
+            throw new InvalidArgumentException('Tag list must be an array');
     	foreach($tags as $tag_name => $tag_value){
     		$this->setTag($tag_name, $tag_value);
     	}
     }
 
     function setTag($tag_name, $tag_value){
+        if(! is_string($tag_name))
+            throw new InvalidArgumentException('Tag name must be a string');
+        if(! is_string($tag_value))
+            throw new InvalidArgumentException('Tag value must be a string');
+        if($tag_value == "")
+            unset($this->tags[$tag_name]);
 		$this->tags[$tag_name] = $tag_value;
 	}
 
